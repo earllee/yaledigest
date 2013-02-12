@@ -6,7 +6,8 @@ require 'pg'
 
 url = 'http://www.oreillynet.com/pub/feed/1?format=rss2'
 feed = RSS::Parser.parse(open(url).read, false)
-puts "#{feed.channel.title}"
+#puts "#{feed.channel.title}"
+
 feed.items.each do |item|
 	#res = conn.exec('INSERT INTO articles(title, description, link) VALUES (\'' + item.title + '\',\'' + item.description + '\',\'' + item.link + '\');')
 
