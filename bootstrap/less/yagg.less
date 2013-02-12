@@ -1,11 +1,67 @@
-@import "bootstrap.less";
-@import "navbar.less";
-@import "dropdowns.less";
+@import "variables.less";
 
-body {
-	padding-top: 200px;
+// YAGG Vars
+
+.navbar {
+	.brand {
+		color: white;
+		text-shadow: none;
+	}
+
+	.btn-navbar {
+		background: @yaleBlue;
+	}
+
+	.nav {
+		li {
+			a {
+				color: white;
+				text-shadow: none;
+			}
+		}
+	}
 }
 
 .navbar-inner {
-	background: #0F4D92;
+	background: @yaleBlue;
+}
+
+#board {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		border-bottom: 1px solid #ccc;
+
+		&:last-child {
+			border: none;
+		}
+
+		&:hover {
+			height: 120%;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			font-size: 16px;
+
+			&:hover {
+				text-decoration: none;
+				background: @yaleBlue;
+				color: white;
+				font-size: 30px;
+				line-height: 120%;
+
+				-webkit-transition: line-height 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+				-moz-transition: line-height 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+				-o-transition: line-height 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+				-ms-transition: line-height 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+				transition: line-height 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+			}
+		}
+	}
 }
