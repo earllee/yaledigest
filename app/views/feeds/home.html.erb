@@ -46,7 +46,9 @@
 			<%= t %>
 		<% end %>
 		
-		
+		<% @articles.each do |aa| %>
+			<%= aa[0] %>
+		<% end %>
 		<li><a href="#">1. Article one</a></li>
 	</ul>
 	<hr>
