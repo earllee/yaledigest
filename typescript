@@ -1,0 +1,365 @@
+Script started on Fri Feb 15 23:49:50 2013
+[?1034h[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mserver
+bash: server: command not found
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mj[Krails
+Usage: rails COMMAND [ARGS]
+
+The most common rails commands are:
+ generate    Generate new code (short-cut alias: "g")
+ console     Start the Rails console (short-cut alias: "c")
+ server      Start the Rails server (short-cut alias: "s")
+ dbconsole   Start a console for the database specified in config/database.yml
+             (short-cut alias: "db")
+ new         Create a new Rails application. "rails new my_app" creates a
+             new application called MyApp in "./my_app"
+
+In addition to those, there are:
+ application  Generate the Rails application code
+ destroy      Undo code generated with "generate" (short-cut alias: "d")
+ benchmarker  See how fast a piece of code runs
+ profiler     Get profile information from a piece of code
+ plugin       Install a plugin
+ runner       Run a piece of code in the application environment (short-cut alias: "r")
+
+All commands can be run with -h (or --help) for more information.
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrails server
+=> Booting WEBrick
+=> Rails 3.2.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+Exiting
+/Users/Earl/Sandbox/yalenewsaggregator/config/routes.rb:53:in `block in <top (required)>': undefined local variable or method `map' for #<ActionDispatch::Routing::Mapper:0x007f9fc2973ce0> (NameError)
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:272:in `instance_exec'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:272:in `eval_block'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:249:in `draw'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config/routes.rb:1:in `<top (required)>'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:245:in `load'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:245:in `block in load'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:245:in `load'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/file_update_checker.rb:78:in `call'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/file_update_checker.rb:78:in `execute'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:27:in `updater'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:30:in `instance_exec'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:30:in `run'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:54:in `each'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:54:in `run_initializers'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:136:in `initialize!'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config/environment.rb:5:in `<top (required)>'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config.ru:3:in `require'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config.ru:3:in `block in <main>'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config.ru:in `new'
+	from /Users/Earl/Sandbox/yalenewsaggregator/config.ru:in `<main>'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:40:in `eval'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:40:in `parse_file'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/server.rb:200:in `app'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/server.rb:304:in `wrapped_app'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/server.rb:254:in `start'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:70:in `start'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+	from /Users/Earl/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mls
+Gemfile		app		doc		public		vendor
+Gemfile.lock	bootstrap	getRSS		script
+README.md	config		lib		test
+README.rdoc	config.ru	log		tmp
+Rakefile	db		other files	typescript
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrbenv
+rbenv 0.4.0
+Usage: rbenv <command> [<args>]
+
+Some useful rbenv commands are:
+   commands    List all available rbenv commands
+   local       Set or show the local application-specific Ruby version
+   global      Set or show the global Ruby version
+   shell       Set or show the shell-specific Ruby version
+   install     Install a Ruby version using the ruby-build plugin
+   uninstall   Uninstall a specific Ruby version
+   rehash      Rehash rbenv shims (run this after installing executables)
+   version     Show the current Ruby version and its origin
+   versions    List all Ruby versions available to rbenv
+   which       Display the full path to an executable
+   whence      List all Ruby versions that contain the given executable
+
+See `rbenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/sstephenson/rbenv#readme
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrbenv uns[Kinstall
+Usage: rbenv uninstall [-f] <version>
+
+   -f  Attempt to remove the specified version without prompting
+       for confirmation. If the version does not exist, do not
+       display an error message.
+
+See `rbenv versions` for a complete list of installed versions.
+
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrbenv uninstall [K[K[K[K[K[K[K[K[K[Kwhich
+Usage: rbenv which <command>
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrbenv ber[K[K[K[K[K[K[K[K[Kbrew uninstall rbenv
+Uninstalling /usr/local/Cellar/rbenv/0.4.0...
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mls
+Gemfile		app		doc		public		vendor
+Gemfile.lock	bootstrap	getRSS		script
+README.md	config		lib		test
+README.rdoc	config.ru	log		tmp
+Rakefile	db		other files	typescript
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrails
+/Users/Earl/.rbenv/shims/rails: line 21: /usr/local/Cellar/rbenv/0.4.0/libexec/rbenv: No such file or directory
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mvim ~/.po[Krofile
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[38;5;231m[48;5;234m[H[2J[?25l[24;1H"~/.profile" 17L, 557C[>c[1;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m# MacPorts Installer addition on 2012-12-20_at_02:29:30: adding an appropriaa[m[38;5;231m[48;5;234m[2;1H[1m[38;5;245m[48;5;59m    [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59mte P[m[38;5;231m[48;5;234m[97m[101mATH variable for use with MacPorts.[m[38;5;231m[48;5;234m[1m[48;5;59m                                     [m[38;5;231m[48;5;234m[3;1H[38;5;245m[48;5;59m  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=/opt/local/bin:/opt/local/sbin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  2 [m[38;5;231m[48;5;234m[38;5;95m# Finished adapting your PATH environment variable for use with MacPorts.[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  3 
+  4 
+  5 [m[38;5;231m[48;5;234m[38;5;95m### Added by the Heroku Toolbelt[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  6 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m"[m[38;5;231m[48;5;234m[38;5;186m/usr/local/heroku/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH"[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  7 
+  8 [m[38;5;231m[48;5;234m[38;5;95m# Setting PATH for Python 2.7[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  9 [m[38;5;231m[48;5;234m[38;5;95m# The orginal version is saved in .profile.pysave[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 10 [m[38;5;231m[48;5;234m[38;5;81mPATH[m[38;5;231m[48;5;234m=[1m[38;5;197m"[m[38;5;231m[48;5;234m[38;5;186m/Library/Frameworks/Python.framework/Versions/2.7/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m${PATH}"[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 11 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 12 
+ 13 [m[38;5;231m[48;5;234m[38;5;95m# Terminal coloring[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 14 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m CLICOLOR=1[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 15 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m LSCOLORS=GxFxCxDxBxegedabagaced[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m 16 [m[38;5;231m[48;5;234m
+[38;5;59m[48;5;235m~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;5H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[38;5;245m[48;5;59m  1 [m[38;5;231m[48;5;234m[38;5;95m# MacPorts Installer addition on 2012-12-20_at_02:29:30: adding an appropriaa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m    [m[38;5;231m[48;5;234m[38;5;95mte P[m[38;5;231m[48;5;234m[97m[101mA[m[38;5;231m[48;5;234m[2;44H[K[3;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH=/opt/local/bin:/opt/local/sbin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m$PATH[m[38;5;231m[48;5;234m[1m[48;5;59m                            [m[38;5;231m[48;5;234m[4;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15[3;5H[?12l[?25h[?25l[1;2H 2[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=/opt/local/bin:/opt/local/sbin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH[m[38;5;231m[48;5;234m[3;53H[K[4;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m# Finished adapting your PATH environment variable for use with MacPorts.[m[38;5;231m[48;5;234m[1m[48;5;59m   [m[38;5;231m[48;5;234m[5;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14[4;5H[?12l[?25h[?25l[1;2H 3[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  2
+  1 [m[38;5;231m[48;5;234m[38;5;95m# Finished adapting your PATH environment variable for use with MacPorts.[m[38;5;231m[48;5;234m[4;78H[K[5;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[48;5;59m                                                                            [m[38;5;231m[48;5;234m[6;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13[5;5H[?12l[?25h[?25l[1;2H 4[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[5;5H[K[6;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[48;5;59m                                                                            [m[38;5;231m[48;5;234m[7;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12[6;5H[?12l[?25h[?25l[1;2H 5[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[6;5H[K[7;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m### Added by the Heroku Toolbelt[m[38;5;231m[48;5;234m[1m[48;5;59m                                            [m[38;5;231m[48;5;234m[8;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11[7;5H[?12l[?25h[?25l[1;2H 6[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[38;5;95m### Added by the Heroku Toolbelt[m[38;5;231m[48;5;234m[7;37H[K[8;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"[m[38;5;231m[48;5;234m[1m[38;5;186m[48;5;59m/usr/local/heroku/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m$PATH"[m[38;5;231m[48;5;234m[1m[48;5;59m                                   [m[38;5;231m[48;5;234m[9;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10[8;5H[?12l[?25h[?25l[1;2H 7[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m"[m[38;5;231m[48;5;234m[38;5;186m/usr/local/heroku/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH"[m[38;5;231m[48;5;234m[8;46H[K[9;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[48;5;59m                                                                            [m[38;5;231m[48;5;234m[10;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9[9;5H[?12l[?25h[?25l[1;2H 8[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  7
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[9;5H[K[10;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m# Setting PATH for Python 2.7[m[38;5;231m[48;5;234m[1m[48;5;59m                                               [m[38;5;231m[48;5;234m[11;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7
+  8[10;5H[?12l[?25h[?25l[1;2H 9[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[38;5;95m# Setting PATH for Python 2.7[m[38;5;231m[48;5;234m[10;34H[K[11;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m# The orginal version is saved in .profile.pysave[m[38;5;231m[48;5;234m[1m[48;5;59m                           [m[38;5;231m[48;5;234m[12;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6
+  7[11;5H[?12l[?25h[?25l[1;1H 10[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[38;5;95m# The orginal version is saved in .profile.pysave[m[38;5;231m[48;5;234m[11;54H[K[12;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59mPATH[m[38;5;231m[48;5;234m[1m[48;5;59m=[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"[m[38;5;231m[48;5;234m[1m[38;5;186m[48;5;59m/Library/Frameworks/Python.framework/Versions/2.7/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m${PATH}"[m[38;5;231m[48;5;234m[1m[48;5;59m        [m[38;5;231m[48;5;234m[13;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5
+  6[12;5H[?12l[?25h[?25l[1;2H11[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+ 10
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[38;5;81mPATH[m[38;5;231m[48;5;234m=[1m[38;5;197m"[m[38;5;231m[48;5;234m[38;5;186m/Library/Frameworks/Python.framework/Versions/2.7/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m${PATH}"[m[38;5;231m[48;5;234m[12;73H[K[13;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH[m[38;5;231m[48;5;234m[1m[48;5;59m                                                                 [m[38;5;231m[48;5;234m[14;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4
+  5[13;5H[?12l[?25h[?25l[1;2H12[m[38;5;231m[48;5;234m[76C[38;5;95maa[m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m 
+ 11
+ 10
+  9
+  8
+  7
+  6
+  5
+  4
+  3
+  2
+  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH[m[38;5;231m[48;5;234m[13;16H[K[14;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[48;5;59m                                                                            [m[38;5;231m[48;5;234m[15;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4[14;5H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mvim ~/.bash_profile
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[38;5;231m[48;5;234m[H[2J[?25l[24;1H"~/.bash_profile" 6L, 203C[>c[1;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m# Added for rbenv[m[38;5;231m[48;5;234m[1m[48;5;59m                                                           [m[38;5;231m[48;5;234m[2;1H[38;5;245m[48;5;59m  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m"$HOME[m[38;5;231m[48;5;234m[38;5;186m/.rbenv/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH"[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  2 [m[38;5;231m[48;5;234m[1m[38;5;197meval[m[38;5;231m[48;5;234m [1m[38;5;197m"$([m[38;5;231m[48;5;234m[38;5;231mrbenv init -[m[38;5;231m[48;5;234m[1m[38;5;197m)"[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  3 
+  4 [m[38;5;231m[48;5;234m[38;5;95m# Custom bash prompt via kirsle.net/wizards/ps1.html[m[38;5;231m[48;5;234m
+[38;5;245m[48;5;59m  5 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PS1=[m[38;5;231m[48;5;234m[1m[38;5;197m"[m[38;5;231m[48;5;234m[38;5;186m\[[m[38;5;231m[48;5;234m[1m[38;5;197m$([m[38;5;231m[48;5;234m[38;5;231mtput bold[m[38;5;231m[48;5;234m[1m[38;5;197m)[m[38;5;231m[48;5;234m[38;5;186m\]\[[m[38;5;231m[48;5;234m[1m[38;5;197m$([m[38;5;231m[48;5;234m[38;5;231mtput setaf [m[38;5;231m[48;5;234m[38;5;141m6[m[38;5;231m[48;5;234m[1m[38;5;197m)[m[38;5;231m[48;5;234m[38;5;186m\][\w]$ \[[m[38;5;231m[48;5;234m[1m[38;5;197m$([m[38;5;231m[48;5;234m[38;5;231mtput sgr0[m[38;5;231m[48;5;234m[1m[38;5;197m)[m[38;5;231m[48;5;234m[38;5;186m\][m[38;5;231m[48;5;234m[1m[38;5;197m"[m[38;5;231m[48;5;234m
+[38;5;59m[48;5;235m~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;5H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[38;5;245m[48;5;59m  1 [m[38;5;231m[48;5;234m[38;5;95m# Added for rbenv[m[38;5;231m[48;5;234m[1;22H[K[2;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"$HOME[m[38;5;231m[48;5;234m[1m[38;5;186m[48;5;59m/.rbenv/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m$PATH"[m[38;5;231m[48;5;234m[1m[48;5;59m                                        [m[38;5;231m[48;5;234m[3;2H[38;5;245m[48;5;59m 1
+  2
+  3
+  4[2;5H[?12l[?25h[?25l[1;2H 2
+  1 [m[38;5;231m[48;5;234m[1m[38;5;197mexport[m[38;5;231m[48;5;234m[38;5;81m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m"$HOME[m[38;5;231m[48;5;234m[38;5;186m/.rbenv/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m$PATH"[m[38;5;231m[48;5;234m[2;41H[K[3;1H[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59meval[m[38;5;231m[48;5;234m[1m[48;5;59m [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"$([m[38;5;231m[48;5;234m[1m[38;5;231m[48;5;59mrbenv init -[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m)"[m[38;5;231m[48;5;234m[1m[48;5;59m                                                      [m[38;5;231m[48;5;234m[4;2H[38;5;245m[48;5;59m 1
+  2
+  3[3;5H[?12l[?25h[?25l[1;2H 1[m[38;5;231m[48;5;234m
+[1m[38;5;245m[48;5;59m  0 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"$HOME[m[38;5;231m[48;5;234m[1m[38;5;186m[48;5;59m/.rbenv/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m$PATH"[m[38;5;231m[48;5;234m[1m[48;5;59m                                        [m[38;5;231m[48;5;234m[3;1H[38;5;245m[48;5;59m  1 [m[38;5;231m[48;5;234m[1m[38;5;197meval[m[38;5;231m[48;5;234m [1m[38;5;197m"$([m[38;5;231m[48;5;234m[38;5;231mrbenv init -[m[38;5;231m[48;5;234m[1m[38;5;197m)"[m[38;5;231m[48;5;234m[3;27H[K[4;2H[38;5;245m[48;5;59m 2
+  3
+  4[2;5H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[24;1H[1m-- INSERT --[m[38;5;231m[48;5;234m[24;13H[K[2;2H[1m[38;5;245m[48;5;59m 2 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59mexport[m[38;5;231m[48;5;234m[1m[38;5;81m[48;5;59m PATH=[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"$HOME[m[38;5;231m[48;5;234m[1m[38;5;186m[48;5;59m/.rbenv/bin:[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m$PATH"[m[38;5;231m[48;5;234m[1m[48;5;59m                                        [m[38;5;231m[48;5;234m[3;2H[38;5;245m[48;5;59m 3
+  4
+  5
+  6[2;5H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[1m[38;5;245m[48;5;59m [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m#export PATH="$HOME/.rbenv/bin:$PATH"[m[38;5;231m[48;5;234m[1m[48;5;59m                                       [2;6H[?12l[?25h[?25l[m[38;5;231m[48;5;234m[38;5;245m[48;5;59m  2 [m[38;5;231m[48;5;234m[38;5;95m#export PATH="$HOME/.rbenv/bin:$PATH"[m[38;5;231m[48;5;234m[2;42H[K[3;1H[1m[38;5;245m[48;5;59m  3 [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59meval[m[38;5;231m[48;5;234m[1m[48;5;59m [m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m"$([m[38;5;231m[48;5;234m[1m[38;5;231m[48;5;59mrbenv init -[m[38;5;231m[48;5;234m[1m[38;5;197m[48;5;59m)"[m[38;5;231m[48;5;234m[1m[48;5;59m                                                      [3;6H[?12l[?25h[?25l[?12l[?25h[?25l[m[38;5;231m[48;5;234m[1m[38;5;245m[48;5;59m [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m#eval "$(rbenv init -)"[m[38;5;231m[48;5;234m[1m[48;5;59m                                                     [3;6H[?12l[?25h[m[38;5;231m[48;5;234m[24;1H[K[3;5H[?25l[1;2H[38;5;245m[48;5;59m 2
+  1[m[38;5;231m[48;5;234m[3;2H[1m[38;5;245m[48;5;59m 0 [m[38;5;231m[48;5;234m[1m[38;5;95m[48;5;59m#eval "$(rbenv init -)"[m[38;5;231m[48;5;234m[1m[48;5;59m                                                     [m[38;5;231m[48;5;234m[4;2H[38;5;245m[48;5;59m 1
+  2
+  3[3;5H[?12l[?25h[?25l[24;1H[m[38;5;231m[48;5;234m:[?12l[?25hw[?25l"~/.bash_profile" 6L, 205C written[3;5H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mrails
+/Users/Earl/.rbenv/shims/rails: line 21: /usr/local/Cellar/rbenv/0.4.0/libexec/rbenv: No such file or directory
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mj[Krbenv
+bash: /usr/local/bin/rbenv: No such file or directory
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mbrew
+Example usage:
+  brew [info | home | options ] [FORMULA...]
+  brew install FORMULA...
+  brew uninstall FORMULA...
+  brew search [foo]
+  brew list [FORMULA...]
+  brew update
+  brew upgrade [FORMULA...]
+
+Troubleshooting:
+  brew doctor
+  brew install -vd FORMULA
+  brew [--env | --config]
+
+Brewing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+  open https://github.com/mxcl/homebrew/wiki/Formula-Cookbook
+
+Further help:
+  man brew
+  brew home
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mbrew s[Kinstall rails
+[4;31mError[0m: No available formula for rails 
+[1m[36m[~/Sandbox/yalenewsaggregator]$ (B[mr
