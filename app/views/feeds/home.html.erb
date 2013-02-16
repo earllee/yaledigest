@@ -42,9 +42,11 @@
 
 <div id="board" class="container-fluid">
 	<ul class="">
-		<% @articles.each do |t| %>
-			<%= t["title"] %>
+		<% @titles.each do |t| %>
+			<%= t %>
 		<% end %>
+		
+		
 		<li><a href="#">1. Article one</a></li>
 	</ul>
 	<hr>
