@@ -1,4 +1,6 @@
 Yagg::Application.routes.draw do
+  get "feeds/home"
+
   get "pages/home"
 
   get "pages/contact"
