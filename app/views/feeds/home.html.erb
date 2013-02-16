@@ -43,7 +43,7 @@
 <div id="board" class="container-fluid">
 	<ul class="">
 		<% @articles.each do |t| %>
-			<%=  t[1]  %>
+			<%=  t(1) %>
 		<% end %>
 		<li><a href="#">1. Article one</a></li>
 	</ul>
