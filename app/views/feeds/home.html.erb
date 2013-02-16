@@ -42,8 +42,8 @@
 
 <div id="board" class="container-fluid">
 	<ul class="">
-		<% @titles.each do |t| %>
-			<li><%= t %></li>
+		<% @articles.each do |t| %>
+			<li><% puts "#{t[0]}" %></li>
 		<% end %>
 		<li><a href="#">1. Article one</a></li>
 	</ul>
