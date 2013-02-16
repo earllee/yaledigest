@@ -23,9 +23,6 @@
 		<div class="nav-collapse collapse">
 			<ul class="nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li class=""><a href="#">Item 1</a></li>
-				<li class=""><a href="#">Item 2</a></li>
-				<li class=""><a href="#">Item 3</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					Dropdown <b class="caret"></b></a>
 
@@ -45,11 +42,10 @@
 
 <div id="board" class="container-fluid">
 	<ul class="">
+		<% for i in 0..5 do 
+			puts "<li><a href=\"#\">", @titles[i] "</a></li>"
+		%>
 		<li><a href="#">1. Article one</a></li>
-		<li><a href="#">2. Article two</a></li>
-		<li><a href="#">3. Article three</a></li>
-		<li><a href="#">4. Article four</a></li>
-		<li><a href="#">5. Article five</a></li>
 	</ul>
 	<hr>
 
