@@ -50,7 +50,9 @@ Yagg::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  map.connect '', :controller => "ViewsController", :action => "index"
+  map.root :controller => "views", :action => "index"
+  
+  #map.connect '', :controller => "ViewsController", :action => "index"
   
   # See how all your routes lay out with "rake routes"
 
