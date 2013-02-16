@@ -3,7 +3,7 @@ Yagg::Application.routes.draw do
 
   get "pages/contact"
 
-  map.root :controller => "home"
+  #map.root :controller => "home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
