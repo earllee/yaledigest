@@ -4,6 +4,8 @@ Yagg::Application.routes.draw do
   get "pages/home"
 
   get "pages/contact"
+  
+  get "feeds/test"
 
   #map.root :controller => "home"
 
