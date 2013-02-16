@@ -1,5 +1,5 @@
 class ViewsController < ApplicationController
 	def index
-		views = 30436
+		@views = 30436
 	end
 end
