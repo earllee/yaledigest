@@ -1,4 +1,8 @@
 Yagg::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,7 +54,7 @@ Yagg::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  match '' => '', :controller => "views", :action => "index"
+  #match '' => '', :controller => "views", :action => "index"
   
   #map.connect '', :controller => "ViewsController", :action => "index"
   
