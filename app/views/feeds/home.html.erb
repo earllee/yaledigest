@@ -43,14 +43,16 @@
 
 <div id="board" class="container-fluid">
 	<ol class="">
+		<% i = 0 %>
 		<% @articles.each do |aa| %>
 			<li>
-				<details>
-				<summary><%= aa["title"] %></summary>
-				<p>
-				<a href="<%= aa["link"] %>"><%= aa["title"] %></a>
-				</p>
-				</details>
+			<a href="#" data-toggle="collapse" data-target=	"#content<%= i %>">
+				<%= aa["title"] %>
+			</a>
+			<p id="content<%= i %>" class="collapse">
+				<%= aa["description"] %>
+				<a href="<%= aa["link"] %>">[Read more]</a>
+			</p>
 			</li>
 		<% end %>
 	</ol>
