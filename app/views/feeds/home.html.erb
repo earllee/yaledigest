@@ -43,7 +43,14 @@
 <div id="board" class="container-fluid">
 	<ol class="">
 		<% @articles.each do |aa| %>
-			<li><a href="<%= aa["link"] %>"><%= aa["title"] %></a></li>
+			<li>
+				<details>
+				<summary><%= aa["title"] %></summary>
+				<p>
+				<a href="<%= aa["link"] %>"><%= aa["title"] %></a>
+				</p>
+				</details>
+			</li>
 		<% end %>
 	</ol>
 	<hr>
