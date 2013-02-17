@@ -41,16 +41,16 @@
 
 
 <div id="board" class="container-fluid">
-	<ul class="">
-		<% @titles.each do |t| %>
-			<%= t %>
-		<% end %>
-		<br>
+	<ol class="">
+		<% #@titles.each do |t| %>
+			<%= #t %>
+		<% #end %>
+		<li>
 		<% @articles.each do |aa| %>
-			<%= aa["title"] %> <%= aa["description"] %> <%= aa["link"] %> <br>
+			<a href="<%= aa["link"] %>"><%= aa["title"] %><%= #aa["description"] %></a>
 		<% end %>
-		<li><a href="#">1. Article one</a></li>
-	</ul>
+		</li>
+	</ol>
 	<hr>
 
 	<footer>
