@@ -1,3 +1,9 @@
+@media (min-width: 1200px) {
+  body {
+    padding-top: 50px;
+  }
+}
+
 .navbar .brand {
   color: white;
   text-shadow: none;
