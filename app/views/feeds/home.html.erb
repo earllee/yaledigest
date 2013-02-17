@@ -42,12 +42,9 @@
 
 <div id="board" class="container-fluid">
 	<ol class="">
-		<% #@titles.each do |t| %>
-			<%= #t %>
-		<% #end %>
 		<li>
 		<% @articles.each do |aa| %>
-			<a href="<%= aa["link"] %>"><%= aa["title"] %><%= #aa["description"] %></a>
+			<a href="<%= aa["link"] %>"><%= aa["title"] %></a>
 		<% end %>
 		</li>
 	</ol>
