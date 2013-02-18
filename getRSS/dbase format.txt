@@ -1,0 +1,9 @@
+CREATE TABLE "rss_articles" (
+id integer PRIMARY KEY,
+source varchar(300),
+title varchar(500),
+description varchar(2000),
+link varchar(500),
+pubDate date,
+content varchar (20000)
+);

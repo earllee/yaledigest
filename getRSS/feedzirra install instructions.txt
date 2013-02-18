@@ -1,0 +1,6 @@
+installing curb:
+
+gem install curb -- --with-curl-lib=C:/curl/lib --with-curl-include=C:/curl/include
+
+
+gem install feedzirra -- --with-curl-lib=C:/curl/lib --with-curl-include=C:/curl/include

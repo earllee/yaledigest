@@ -7,6 +7,10 @@ Yagg::Application.routes.draw do
   
   get "feeds/test"
 
+ 
+  
+  #post for updating votes
+  
   #map.root :controller => "home"
 
   # The priority is based upon order of creation:
