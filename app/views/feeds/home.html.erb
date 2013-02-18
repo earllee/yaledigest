@@ -36,11 +36,17 @@
 	<ol class="listing">
 		<% i = 0 %>
 		<% @articles.each do |article| %>
+			<% src = case article["source"] 
+					when "The Yale Herald" then "success"
+					when "Yale Daily News" then "info"
+					when "Yale News" then "important"
+			%>
+
 			<li>
 			<a href="#" data-toggle="collapse" data-target=	"#desc<%= i %>">
 				<%= article["title"] %>
 			</a>
-			<span class="label label-info"><%= article["source"] %></span>
+			<span class="label label-<%= src %>"><%= article["source"] %></span>
 			<p id="desc<%= i %>" class="collapse">
 				<%= article["description"] %>
 				<a href="#content<%= i %>" data-toggle="modal">[Read more]</a>
