@@ -5,8 +5,11 @@ require 'nokogiri'
 conn = PGconn.open("dbname=d5do5eebiebbrt host=ec2-107-22-169-108.compute-1.amazonaws.com user=irgffdctcevjds password=akxBZ5CEfIbGgytAF2L9YfQo_E port=5432 sslmode=require")
 
 rss_content = ""
-rss_feed = "http://yaledailynews.com/feed/"
+rss_feed1 = "http://yaledailynews.com/feed/"
+rss_feed2 = "http://yaleherald.com/feed/"
+rss_feeds = [rss_feed1, rss_feed2]
 
+rss_feeds.each do |rss_feed|
 doc = Nokogiri::XML(open(rss_feed)) #do |config|
 	#config.options = Nokogiri::XML::ParseOptions.STRICT
 
@@ -31,6 +34,7 @@ if !search.empty?
 		end
 end
 
+end
 
 #doc.xpath("//rss/channel/item").each do |item|
 
@@ -60,4 +64,4 @@ end
   #puts " (#{item.link})"
   #puts
   #puts item.description
-end
+#end
