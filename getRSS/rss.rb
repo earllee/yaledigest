@@ -13,15 +13,18 @@ rss_feed = "http://yaledailynews.com/feed/"
 url = rss_feed
 feed = RSS::Parser.parse(open(url).read, false)
 
-puts "#{feed.channel.title}"
+#puts "#{feed.channel.title}"
+
+puts feed
 
 feed.items.each do |item|
-	res = conn.exec('INSERT INTO articles(title, description, link) VALUES (\'' + item.title + '\',\'' + item.description + '\',\'' + item.link + '\');')
+	tempdate = "{item.date}"
+	res = conn.exec('INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'' + item.title + '\',\'' + item.description + '\',\'' + item.link + '\',\'' + feed.channel.title + '\', \'' + tempdate + '\',\'' + item.content  + '\');')
 
-  puts item.title
-  puts " (#{item.link})"
-  puts
-  puts item.description
+  #puts item.title
+  #puts " (#{item.link})"
+  #puts
+  #puts item.description
 end
 
 
