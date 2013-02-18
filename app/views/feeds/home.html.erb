@@ -37,13 +37,21 @@
 		<% i = 0 %>
 		<% @articles.each do |aa| %>
 			<li>
-			<a href="#" data-toggle="collapse" data-target=	"#content<%= i %>">
+			<a href="#" data-toggle="collapse" data-target=	"#desc<%= i %>">
 				<%= aa["title"] %>
 			</a>
-			<p id="content<%= i %>" class="well well-small collapse">
+			<p id="desc<%= i %>" class="well well-small collapse">
 				<%= aa["description"] %>
-				<a href="<%= aa["link"] %>">[Read more]</a>
+				<a href="#content<%= i %>" data-toggle="modal">[Read more]</a>
 			</p>
+			<div id="content<%= i %>" class="modal hide fade">
+				<div class="modal-header">
+					<a href="<%= aa["link"] %>"><%= aa["title"] %></a>
+				</div>
+				<div class="modal-body">
+					Lorem ipsum dolor content goes here.
+				</div>
+			</div>
 			</li>
 			<% i += 1 %>
 		<% end %>
