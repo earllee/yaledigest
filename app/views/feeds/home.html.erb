@@ -33,13 +33,14 @@
 
 
 <div id="board" class="container-fluid">
-	<ol class="">
+	<ol class="listing">
 		<% i = 0 %>
 		<% @articles.each do |article| %>
 			<li>
 			<a href="#" data-toggle="collapse" data-target=	"#desc<%= i %>">
 				<%= article["title"] %>
 			</a>
+			<div class=""><%= article.source %></div>
 			<p id="desc<%= i %>" class="collapse">
 				<%= article["description"] %>
 				<a href="#content<%= i %>" data-toggle="modal">[Read more]</a>
@@ -47,7 +48,7 @@
 			<div id="content<%= i %>" class="modal hide fade">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<a href="<%= article["link"] %>"><%= article["title"] %></a>
+					<a href="<%= article["link"] %>"><%= article["title"] %></a> 
 				</div>
 				<div class="modal-body">
 					<%= article["content"].html_safe %>
