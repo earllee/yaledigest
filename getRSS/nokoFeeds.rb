@@ -25,7 +25,6 @@ if !search.empty?
 			link=data.at("link").text
 			pubDate=data.at("pubDate").text
 			content=data.at("encoded").text
-			#puts cont
 			query = "INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'#{title}\',\'#{description}\',\'#{link}\',\'#{source}\',\'#{pubDate}\',\'#{content}\');"
 			res = conn.exec(query)
 				#puts "title: #{ title } link: #{ link }"
