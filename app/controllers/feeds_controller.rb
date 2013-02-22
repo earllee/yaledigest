@@ -9,8 +9,8 @@ class FeedsController < ApplicationController
 	#	res = conn.exec('SELECT * FROM rss_articles')
 	@titles = res.column_values(0)
 	@articles = res
-	res = conn.exec('select * from (select * from otherpublications as orig order by pubDate desc limit 45) as neww order by randid asc;')
-	@discover = res
+	discover  = conn.exec('select * from (select * from otherpublications as orig order by pubDate desc limit 45) as neww order by randid asc;')
+	@discover = discover
   end
   
   def test
