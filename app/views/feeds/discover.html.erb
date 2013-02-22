@@ -35,7 +35,7 @@
 <div id="board" class="container-fluid">
 	<ol class="listing">
 		<% i = 0 %>
-		<% @articles.each do |article| %>
+		<% @discover.each do |article| %>
 			<% src = case article["source"] 
 					when "The Yale Herald" then "success"
 					when "Yale Daily News" then "info"
