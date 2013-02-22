@@ -7,6 +7,8 @@ Yagg::Application.routes.draw do
   
   get "feeds/test"
 
+  get "feeds/discover"
+
  
   
   #post for updating votes
