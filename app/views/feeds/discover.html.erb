@@ -14,8 +14,8 @@
 
 		<div class="nav-collapse collapse">
 			<ul class="nav">
-				<li class=""><a href="/home">News</a></li>
-				<li class="active"><a href="/discover">Discover</a></li>
+				<li class=""><a href="/feeds/home">News</a></li>
+				<li class="active"><a href="/feeds/discover">Discover</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					Filters<b class="caret"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -35,7 +35,7 @@
 <div id="board" class="container-fluid">
 	<ol class="listing">
 		<% i = 0 %>
-		<% @discover.each do |article| %>
+		<% @articles.each do |article| %>
 			<% src = case article["source"] 
 					when "The Yale Herald" then "success"
 					when "Yale Daily News" then "info"
