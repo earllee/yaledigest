@@ -12,7 +12,7 @@ conn = PGconn.open("dbname=d5do5eebiebbrt host=ec2-107-22-169-108.compute-1.amaz
 #res = conn.exec('SELECT title FROM articles')
 prng = Random.new(524536)
 
-for i in 600..700
+for i in 600..800
 	randid = prng.rand.to_s
 	curid = i.to_s
 	res = conn.exec("UPDATE rss_articles2 SET randID=#{randid} where id=#{curid};")

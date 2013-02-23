@@ -15,6 +15,7 @@ rss_ydn = "http://yaledailynews.com/feed/"
 rss_yherald = "http://yaleherald.com/feed/"
 rss_yalenews = "http://news.yale.edu/news-rss"
 rss_yathletics = "http://www.yalebulldogs.com/landing/headlines-featured?feed=rss_2.0"
+rss_ycc = "http://ycc.yale.edu/feed"
 
 rss_yrecord = "http://www.yalerecord.com/feed/"
 
@@ -42,11 +43,12 @@ rss_yuglawreview = "http://yulr.org/feed/" #updated feb 1
 #notes: logos doesn't work (atom in link)
 
 #rss_feeds = [rss_feed1, rss_feed2]
-#rss_feeds = [rss_ydn, rss_yherald, rss_yalenews, rss_yathletics]			#"http://news.yale.edu/news-rss"]
-rss_feeds = [rss_broadrecognition, rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_qmagazine, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview]
+rss_feeds = [rss_ydn, rss_yherald, rss_yalenews, rss_ycc]			#"http://news.yale.edu/news-rss"]
 
-dbasetable = "otherpublications"
-#dbasetable = "rss_articles2"
+#rss_feeds = [rss_broadrecognition, rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_qmagazine, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview]
+
+#dbasetable = "otherpublications"
+dbasetable = "rss_articles2"
 #dbasetable = "rss_articles"
 
 rss_feeds.each do |rss_feed|

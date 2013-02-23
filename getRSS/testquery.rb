@@ -10,13 +10,8 @@ require 'action_controller'
 conn = PGconn.open("dbname=d5do5eebiebbrt host=ec2-107-22-169-108.compute-1.amazonaws.com user=irgffdctcevjds password=akxBZ5CEfIbGgytAF2L9YfQo_E port=5432 sslmode=require")
 
 #res = conn.exec('SELECT title FROM articles')
-prng = Random.new(524536)
 
-for i in 600..700
-	randid = prng.rand.to_s
-	curid = i.to_s
-	res = conn.exec("UPDATE rss_articles2 SET randID=#{randid} where id=#{curid};")
-end
+res = conn.exec("select title,source,pubDate from rss_articles2 order by pubDate desc limit 45
 
 #lll = res.column_values(0).shuffle
 
