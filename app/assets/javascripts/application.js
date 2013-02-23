@@ -17,4 +17,3 @@
 //= require yagg_js
 //= require_tree .
 
-$('.noscroll').on('click', function(e) {e.preventDefault(); return true;});   
