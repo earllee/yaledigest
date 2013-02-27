@@ -18,11 +18,11 @@
 				<li class="active"><a href="/feeds/discover">Discover</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					Filters<b class="caret"></b></a>
-					<!--ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-						<li><a tabindex="-1" href="#">Stuff</a></li>
+					<ul id="#filters" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+						<li><a id="YaleScientific" tabindex="-1" href="#">Yale Scientific</a></li>
 						<li><a tabindex="-1" href="#">Dropdown 2</a></li>
 						<li><a tabindex="-1" href="#">Dropdown 3</a></li>
-					</ul-->
+					</ul>
 
 				</li>
 			</ul>
@@ -45,7 +45,7 @@
 			%>
 
 			<li>
-			<a class="<%= article["source"].delete(' ') %>"" id="link<%= i %>" href="#link<%= i - 2%>" data-toggle="collapse" data-target="#desc<%= i %>">
+			<a class="<%= article["source"].delete(' ') %>" id="link<%= i %>" href="#link<%= i - 2%>" data-toggle="collapse" data-target="#desc<%= i %>">
 				<%= article["title"] %>
 			</a>
 			<span class="label label-<%= src %>"><%= article["source"] %></span>
