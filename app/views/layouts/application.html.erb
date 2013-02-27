@@ -20,6 +20,7 @@
 
 <script src="http://code.jquery.com/jquery.js"></script>
 	<script>
+$(document).ready(function(){ 
 		$('#filters a').click(function(e){
 
 			//prevent the default behaviour of the link
@@ -35,6 +36,7 @@
 			only the list items that don't have that class and hide them '*/
 			$('#board ol li:not(.' + filter + ')').hide();
 
+		});
 		});
 </script>
 </body>
