@@ -6,9 +6,6 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-	<script> $("[id$=link]").click(function(e) { 
-        e.preventDefault(); 
-});</script> 
 </head>
 <body>
 
@@ -21,6 +18,10 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 	<script>
 $(document).ready(function(){ 
+		$("[id^=link]").click(function(e) { 
+			e.preventDefault(); 
+		});
+
 		$('#filters a').click(function(e){
 
 			//prevent the default behaviour of the link
