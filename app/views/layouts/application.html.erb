@@ -9,24 +9,6 @@
 	<script> $("[id$=link]").click(function(e) { 
         e.preventDefault(); 
 });</script> 
-	<script>
-		$('#filters a').click(function(e){
-
-			//prevent the default behaviour of the link
-			e.preventDefault();
-			alert("hi");
-			//get the id of the clicked link(which is equal to classes of our content
-			var filter = $(this).attr('id');
-
-			//show all the list items(this is needed to get the hidden ones shown)
-			$('#listings ol li').show();
-
-			/*using the :not attribute and the filter class in it we are selecting
-			only the list items that don't have that class and hide them '*/
-			$('#listings ol li:not(.' + filter + ')').hide();
-
-		});
-</script>
 </head>
 <body>
 
@@ -37,5 +19,23 @@
 </footer>
 
 <script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+		$('#filters a').click(function(e){
+
+			//prevent the default behaviour of the link
+			e.preventDefault();
+			alert("hi");
+			//get the id of the clicked link(which is equal to classes of our content
+			var filter = $(this).attr('id');
+
+			//show all the list items(this is needed to get the hidden ones shown)
+			$('#board ol li').show();
+
+			/*using the :not attribute and the filter class in it we are selecting
+			only the list items that don't have that class and hide them '*/
+			$('#board ol li:not(.' + filter + ')').hide();
+
+		});
+</script>
 </body>
 </html>
