@@ -34,7 +34,8 @@ $(document).ready(function(){
 
 			/*using the :not attribute and the filter class in it we are selecting
 			only the list items that don't have that class and hide them '*/
-			$('#board ol li:not(.' + filter + ')').hide();
+			if (filter != "showall")
+				$('#board ol li:not(.' + filter + ')').hide();
 
 		});
 		});
