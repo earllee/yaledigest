@@ -18,7 +18,7 @@ rss_content = ""
 rss_ydn = rfeed.new("http://yaledailynews.com/feed/", "Yale Daily News")
 rss_yherald = rfeed.new("http://yaleherald.com/feed/", "Yale Herald")
 rss_yalenews = rfeed.new("http://news.yale.edu/news-rss", "YaleNews")
-rss_yathletics = rfeed.new("http://www.yalebulldogs.com/landing/headlines-featured?feed=rss_2.0", "Yale Athletics")
+rss_yathletics = rfeed.new("http://www.yalebulldogs.com/landing/headlines-featured?feed=rss_2.0", "Bulldog Sports")
 rss_ycc = rfeed.new("http://ycc.yale.edu/feed", "Yale College Council")
 
 rss_yrecord = rfeed.new("http://www.yalerecord.com/feed/", "Yale Record")
@@ -33,7 +33,7 @@ rss_bbc = "http://feeds.bbci.co.uk/news/rss.xml"
 rss_broadrecognition = "http://www.broadrecognition.com/feed" #updated feb 18
 rss_qmagazine = "http://www.qmagazineatyale.com/feed/" #updated feb 14
 
-rss_crosscampus = "http://yaledailynews.com/crosscampus/feed/"
+rss_crosscampus = rfeed.new("http://yaledailynews.com/crosscampus/feed/", "Yale Daily News")
 
 rss_lightandtruth = rfeed.new("http://lightandtruthonline.wordpress.com/feed/","Light and Truth Online") #updated dec 2012
 rss_logos = rfeed.new("http://yalelogos.com/feed/","Yale Logos") #updated feb 15
@@ -56,7 +56,7 @@ rss_yalefml = rfeed.new("http://yalefml.tumblr.com/rss", "YaleFML")
 #notes: logos doesn't work (atom in link)
 
 
-rss_feeds = [rss_ydn, rss_yherald, rss_yalenews, rss_ycc]			#"http://news.yale.edu/news-rss"]
+rss_feeds = [rss_ydn, rss_yherald, rss_yalenews, rss_ycc, rss_crosscampus, rss_yathletics]			#"http://news.yale.edu/news-rss"]
 
 #rss_feeds = [rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview, rss_rumpus]
 #note: don't use broad recognition or qmagazine
