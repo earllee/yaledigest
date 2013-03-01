@@ -18,6 +18,36 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 	<script>
 $(document).ready(function(){ 
+		$("#filter").keyup(function(){
+
+		// Retrieve the input field text and reset the count to zero
+		var filter = $(this).val(), count = 0;
+		if(!filter){ <-- hide is no text
+		$(".commentlist li").show();
+		return;
+		}
+
+		var regex = new RegExp(filter, "i")); <-- Create a regex variable outside the loop statement
+
+		// Loop through the comment list
+		$(".commentlist li").each(function(){
+
+		// If the list item does not contain the text phrase fade it out
+		if ($(this).text().search(regex) < 0) { <-- use the variable here
+		$(this).fadeOut();
+
+		// Show the list item if the phrase matches and increase the count by 1
+		} else {
+		$(this).show();
+		count++;
+		}
+		});
+
+		// Update the count
+		var numberItems = count;
+		//  $("#filter-count").text("Number of Comments = "+count);
+		});
+
 		$("[id^=link]").click(function(e) { 
 			e.preventDefault(); 
 		});
