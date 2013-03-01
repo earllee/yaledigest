@@ -12,7 +12,7 @@
 <%= yield %>
 
 <footer>
-		<p class="container">&copy; Yale Digest 2013. By Earl &amp; Shenil. Built with love from TD.</p>
+	<p class="container">&copy; Yale Digest 2013. By <a href="mailto:earl.lee@yale.edu">Earl</a> &amp; <a href="mailto:shenil.dodhia@yale.edu">Shenil</a>. Built with love from TD.</p>
 </footer>
 
 <script src="http://code.jquery.com/jquery.js"></script>
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			return;
 		}
 
-		var regex = new RegExp(filter, "i")}); 
+		var regex = new RegExp(filter, "i")); 
 
 		// Loop through the comment list
 		$(".listing li").each(function(){
