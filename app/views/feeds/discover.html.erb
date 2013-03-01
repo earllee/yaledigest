@@ -29,9 +29,10 @@
 						<li><a id="YaleEconomicReview" tabindex="-1" href="#">Yale Economic Review</a></li>
 						<li><a id="YaleEpicurean" tabindex="-1" href="#">Yale Epicurean</a></li>
 						<li><a id="TheGlobalist" tabindex="-1" href="#">The Globalist</a></li>
-						<li><a id="YaleJournalofPublicHealth" tabindex="-1" href="#">Yale Journal of Publich Health</a></li>
+						<li><a id="TheYaleJournalofPH" tabindex="-1" href="#">Yale Journal of Public Health</a></li>
 						<li><a id="YaleJournalofMedicineandLaw" tabindex="-1" href="#">Yale Journal of Medicine and Law</a></li>
 						<li><a id="YaleUGLawReview" tabindex="-1" href="#">Yale Undergraduate Law Review</a></li>
+						<li><a id="YaleRumpus" tabindex="-1" href="#">Yale Rumpus</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -49,9 +50,16 @@
 		<% i = 0 %>
 		<% @articles.each do |article| %>
 			<% src = case article["source"] 
-					when "The Yale Herald" then "success"
-					when "Yale Daily News" then "info"
-					when "Yale News" then "important"
+					when "Yale Scientific" then "success"
+					when "The Yale Journal of PH" then "success"
+					when "Yale Journal of Medicine and Law" then "success"
+					when "The Politic" then "info"
+					when "The Globalist" then "info"
+					when "Yale UG Law Review" then "info"
+					when "Light and Truth" then "info"
+					when "Yale Economic Review" then "important"
+					when "Yale Epicurean" then "warning"
+					when "The New Journal at Yale" then "inverse"
 					else "default"
 					end
 			%>
