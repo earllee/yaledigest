@@ -23,12 +23,12 @@ $(document).ready(function(){
 
 		// Retrieve the input field text and reset the count to zero
 		var filter = $(this).val(), count = 0;
-		if(!filter){ <-- hide is no text
+		if(!filter){
 			$("#board ol li").show();
 			return;
 		}
 
-var regex = new RegExp(filter, "i")}); 
+		var regex = new RegExp(filter, "i")}); 
 
 		// Loop through the comment list
 		$(".listing li").each(function(){
