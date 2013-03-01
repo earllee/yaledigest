@@ -8,7 +8,8 @@ Yagg::Application.routes.draw do
   get "feeds/test"
 
   get "feeds/discover"
-
+	
+	root :to => "feeds/home"
  
   
   #post for updating votes
