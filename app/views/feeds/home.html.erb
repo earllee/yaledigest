@@ -56,7 +56,7 @@
 			</a>
 			<span class="label label-<%= src %>"><%= article["source"] %></span>
 			<p id="desc<%= i %>" class="collapse">
-				<span class="small"><%= article["pubDate"] article["date"]%></span>
+				<span class="small"><%= article["pubdate_s"] %></span>
 				<%= article["description"].html_safe %>
 				<% readMoreLink = (article["content"].empty? ? article["link"] : "#content#{i}")%>
 				<a href="<%= readMoreLink %>" data-toggle="modal">[Read more]</a>
