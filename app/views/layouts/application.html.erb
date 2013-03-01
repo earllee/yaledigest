@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 		// Show the list item if the phrase matches and increase the count by 1
 		} else {
-		$(this).show();
+		$(this).fadeIn();
 		count++;
 		}
 		});
@@ -60,12 +60,12 @@ $(document).ready(function(){
 			var filter = $(this).attr('id');
 
 			//show all the list items(this is needed to get the hidden ones shown)
-			$('#board ol li').show();
+			$('#board ol li').fadeIn();
 
 			/*using the :not attribute and the filter class in it we are selecting
 			only the list items that don't have that class and hide them '*/
 			if (filter != "showall")
-				$('#board ol li:not(.' + filter + ')').hide();
+				$('#board ol li:not(.' + filter + ')').fadeOut();
 
 		});
 		});

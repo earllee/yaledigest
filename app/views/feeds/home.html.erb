@@ -42,9 +42,10 @@
 		<% i = 0 %>
 		<% @articles.each do |article| %>
 			<% src = case article["source"] 
-					when "The Yale Herald" then "success"
+					when "Yale Herald" then "success"
 					when "Yale Daily News" then "info"
-					when "Yale News" then "important"
+					when "YaleNews" then "important"
+					when "Bulldog Sports" then "warning"
 					else "default"
 					end
 			%>
