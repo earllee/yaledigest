@@ -9,7 +9,7 @@ require 'action_controller'
 
 conn = PGconn.open("dbname=d5do5eebiebbrt host=ec2-107-22-169-108.compute-1.amazonaws.com user=irgffdctcevjds password=akxBZ5CEfIbGgytAF2L9YfQo_E port=5432 sslmode=require")
 
-res = conn.exec('SELECT pubDate, link FROM rss_articles2')
+res = conn.exec('SELECT pubDate, link FROM rss_articles2 WHERE pubdate_s IS NULL')
 
 res.each do |row|
 	d = Date.strptime(row["pubdate"], "%Y-%m-%d").strftime("%b %e, %Y")
@@ -19,7 +19,7 @@ res.each do |row|
 	temp = conn.exec("UPDATE rss_articles2 SET pubdate_s=\'#{d}\' WHERE LINK=\'#{thelink}\'")
 end
 
-res2 = conn.exec('SELECT pubDate, link FROM otherpublications')
+res2 = conn.exec('SELECT pubDate, link FROM otherpublications WHERE pubdate_s IS NULL')
 
 res2.each do |row|
 	dd = Date.strptime(row["pubdate"], "%Y-%m-%d").strftime("%b %e, %Y")
@@ -28,6 +28,7 @@ res2.each do |row|
 	#puts d
 	temp2 = conn.exec("UPDATE otherpublications SET pubdate_s=\'#{dd}\' WHERE LINK=\'#{thelink2}\'")
 end
+#outline for pres: 
 
 #prng = Random.new(43531)
 

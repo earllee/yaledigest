@@ -113,32 +113,53 @@ end
 
 end
 
-#doc.xpath("//rss/channel/item").each do |item|
+rss_feeds2 = [rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview, rss_rumpus]
+dbasetable2 = "otherpublications"
 
-	#puts item.css('title').text()
-	#puts item.css('description').text()
-	#puts item.css('link').text()
-	#r = item.at("content").text()
-#feed = Feedzirra::Feed.fetch_and_parse(rss_feed)
+rss_feeds2.each do |rss_feed|
+doc = Nokogiri::XML(open(rss_feed["url"])) #do |config|
+	#config.options = Nokogiri::XML::ParseOptions.STRICT
 
-#puts "#{feed.channel.title}"
+source = rss_feed["name"]		#doc.xpath("//rss/channel/title").first.text.gsub("'", "\\\\'")
+puts ''
+puts source
 
-#puts feed
+doc.remove_namespaces!
 
-#feed.entries.each do |item|
-#	tempdate = item.published.to_s
-	#puts tempdate
-	#puts item.title, item.summary
-#	puts item.description, item.url
-	#puts "(\'INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'#{item.title.encode('UTF-8').sanitize}\',\'#{item.summary.encode('UTF-8').sanitize}\',\'#{item.url}\',\'#{feed.title.encode('UTF-8').sanitize}\',\'#{tempdate}\',\'#{item.content.sanitize}\');\')"
-	#tempdate = "asdf"
-	#res = conn.exec('INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'' + item.title + '\',\'' + item.summary + '\',\'' + item.url + '\',\'' + feed.title + '\', \'' + tempdate + '\',\'' + item.content  + '\');')
+#puts doc
+search = doc.css('item')
 
-	#	res = conn.exec('INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'' + item.title + '\',\'' + item.summary + '\',\'' + item.url + '\',\'' + feed.title + '\', \'' + tempdate + '\',\'' + item.content  + '\');')
-#	puts "(\'INSERT INTO rss_articles(title, description, link, source, pubDate, content) VALUES (\'#{item.title.encode('UTF-8').sanitize}\',\'#{item.summary.encode('UTF-8').sanitize}\',\'#{item.url}\',\'#{feed.title.encode('UTF-8').sanitize}\',\'#{tempdate}\',\'#{item.content.sanitize}\');\')"
+prng = Random.new()
 
-  #puts item.title
-  #puts " (#{item.link})"
-  #puts
-  #puts item.description
-#end
+if !search.empty?
+		search.each do |data|
+			next if (!(data.at("title")) || !(data.at("description")) || !(data.at("link")) || !(data.at("pubDate")))
+			
+			title=(ActionController::Base.helpers.sanitize(data.at("title").text.force_encoding("UTF-8"))).gsub("'", "\\\\'")
+
+			description=ActionController::Base.helpers.sanitize(data.at("description").text.force_encoding("UTF-8")).gsub("'", "\\\\'")
+			#puts description
+			
+			link=data.at("link").text.force_encoding("UTF-8")
+			pubDate=data.at("pubDate").text
+
+			if (data.at("encoded")) then
+				content=data.at("encoded").text.gsub("'", "\\\\'")
+			else
+				content=''
+			end
+		#puts "#{title}"
+			randid = prng.rand.to_s
+
+			doesexist = conn.exec("select id from #{dbasetable2}  where link=\'#{link}\'");
+			ncopies = doesexist.ntuples();
+			
+			if (ncopies == 0)
+				query = "INSERT INTO #{dbasetable2}(title, description, link, source, pubDate, content,randid) VALUES (\'#{title}\',\'#{description}\',\'#{link}\',\'#{source}\',\'#{pubDate}\',\'#{content}\', #{randid});"
+				res = conn.exec(query)
+				#puts "title: #{ title } link: #{ link }"
+			end
+		end
+end
+
+end
