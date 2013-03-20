@@ -128,7 +128,8 @@ begin
 				
 	end
 
-	rss_feeds2 = [rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview, rss_rumpus, rss_yrecord]
+	#Note: removed yale record for now, requires extra clean up.
+	rss_feeds2 = [rss_lightandtruth, rss_newjournalatyale, rss_thepolitic, rss_econreview, rss_epicurean, rss_globalist, rss_jpublichealth, rss_jmedlaw, rss_yscientific, rss_yuglawreview, rss_rumpus]
 	dbasetable2 = "otherpublications"
 
 	if (updateall)
