@@ -9,6 +9,7 @@ class FeedsController < ApplicationController
 		#	res = conn.exec('SELECT * FROM rss_articles')
 		@titles = res.column_values(0)
 		@articles = res
+		conn.close()
 	end
 
   def discover
@@ -17,6 +18,7 @@ class FeedsController < ApplicationController
 		#	res = conn.exec('SELECT * FROM rss_articles')
 		@titles = res.column_values(0)
 		@articles = res
+		conn.close()
 	end
   
   def test
