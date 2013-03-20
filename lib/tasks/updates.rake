@@ -1,10 +1,7 @@
 task :getarticles do
 
 #!/usr/bin/env ruby
-require 'open-uri'
-require 'pg'
-require 'nokogiri'
-require 'action_controller'
+
 
 #include ActionController::Base.helpers
 #params[:text] = "[foo-bar]"
