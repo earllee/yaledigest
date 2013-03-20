@@ -11,9 +11,7 @@ gem 'pg'
 
 #gem 'sqlite3'
 
-gem 'open-uri'
 gem 'nokogiri'
-gem 'action-controller'
 
 # Gems used only for assets and not required
 # in production environments by default.
