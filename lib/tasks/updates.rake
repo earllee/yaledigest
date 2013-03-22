@@ -196,11 +196,45 @@ begin
 endtime = Time.now
 timedif = endtime - starttime
 
+res = conn.exec('SELECT pubDate, link FROM rss_articles2 WHERE pubdate_s IS NULL')
+
+res.each do |row|
+	begin
+		d = Date.strptime(row["pubdate"], "%Y-%m-%d").strftime("%b %e, %Y")
+		thelink = row["link"]
+		#puts thelink
+		#puts d
+		temp = conn.exec("UPDATE rss_articles2 SET pubdate_s=\'#{d}\' WHERE LINK=\'#{thelink}\'")
+	rescue
+		errmsg = "date: #{thelink}"
+		errors += ";" + errmsg;
+	end
+end
+
+res2 = conn.exec('SELECT pubDate, link FROM otherpublications WHERE pubdate_s IS NULL')
+
+res2.each do |row|
+	begin
+		dd = Date.strptime(row["pubdate"], "%Y-%m-%d").strftime("%b %e, %Y")
+		thelink2 = row["link"]
+		#puts thelink
+		#puts d
+		temp2 = conn.exec("UPDATE otherpublications SET pubdate_s=\'#{dd}\' WHERE LINK=\'#{thelink2}\'")
+	rescue
+		errmsg = "date: #{thelink2}"
+		errors += ";" + errmsg
+	end
+end
+
+
 begin
 	query = "INSERT INTO updatelog(thedate, runtime, numarticles, fullupdate, errors) VALUES (\'#{endtime}\',\'#{timedif}\',\'#{numarticles}\',\'#{updateall}\',\'#{errors}\');"
 	res = conn.exec(query)
 ensure
 	conn.close()
 end
+
+ensure
+	conn.close()
 
 end
