@@ -230,8 +230,6 @@ end
 begin
 	query = "INSERT INTO updatelog(thedate, runtime, numarticles, fullupdate, errors) VALUES (\'#{endtime}\',\'#{timedif}\',\'#{numarticles}\',\'#{updateall}\',\'#{errors}\');"
 	res = conn.exec(query)
-ensure
-	conn.close()
 end
 
 ensure
