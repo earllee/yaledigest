@@ -118,6 +118,7 @@ begin
 						if (ncopies == 0)
 							query = "INSERT INTO #{dbasetable}(title, description, link, source, pubDate, content,randid) VALUES (\'#{title}\',\'#{description}\',\'#{link}\',\'#{source}\',\'#{pubDate}\',\'#{content}\', #{randid});"
 							res = conn.exec(query)
+							numarticles++
 							#puts "title: #{ title } link: #{ link }"
 						end
 
@@ -177,6 +178,7 @@ begin
 						if (ncopies == 0)
 							query = "INSERT INTO #{dbasetable2}(title, description, link, source, pubDate, content,randid) VALUES (\'#{title}\',\'#{description}\',\'#{link}\',\'#{source}\',\'#{pubDate}\',\'#{content}\', #{randid});"
 							res = conn.exec(query)
+							numarticles++
 							#puts "title: #{ title } link: #{ link }"
 						end
 					end
