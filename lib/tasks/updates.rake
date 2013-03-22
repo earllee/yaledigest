@@ -180,14 +180,11 @@ begin
 							#puts "title: #{ title } link: #{ link }"
 						end
 					end
-			rescue
-				errmsg = "#{$!}"
-				errors += "-" + errmsg
 			end
 		rescue
 			errmsg = "#{$!}"
 			errors += "\n" + rss_feed["name"] + ":" + errmsg
-			end
+		end
 		end
 		
 	end
@@ -229,8 +226,10 @@ begin
 
 	query = "INSERT INTO updatelog(thedate, runtime, numarticles, fullupdate, errors) VALUES (\'#{endtime}\',\'#{timedif}\',\'#{numarticles}\',\'#{updateall}\',\'#{errors}\');"
 	res = conn.exec(query)
-
+end
 ensure
 	conn.close()
 
+
+end
 end
