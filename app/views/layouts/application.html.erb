@@ -55,7 +55,7 @@ $(document).ready(function(){
 		var notallowed = new Array();
   $('#showAll').click(function(e){
       console.log('hi');
-          e.preventDefault();
+      e.preventDefault();
           $('.dropdown').addClass('open');
       if (!$('input:checked')) {
         $(this).html('Hide All');
@@ -64,13 +64,15 @@ $(document).ready(function(){
         });
         $('#board ol li').fadeIn();
       } else {
+        console.log('here');
         $(this).html('Show All');
         $('input:checked').each(function(e) {
           $(this).removeAttr('checked');
         });
         $('#board ol li').fadeOut();
       }
-});
+  });
+
   $(':checkbox').click(function(e){
     var filter = $(this).attr('id');
     if (notallowed.indexOf(filter) > -1) {
