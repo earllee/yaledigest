@@ -67,7 +67,9 @@ $(document).ready(function(){
 			if (filter === "showall")
 			{
 				$('#board ol li').fadeIn();
-				$('#filters button').toggleClass('active');
+				$('#filters button').removeClass('active');
+				$('#filters button').addClass('active');
+				//$('#filters button').toggleClass('active');
 				notallowed = new Array();
 				return;
 			}
