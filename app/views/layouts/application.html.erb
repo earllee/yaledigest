@@ -62,7 +62,7 @@ $(document).ready(function(){
 			var filter = $(this).attr('id');
 
 			//show all the list items(this is needed to get the hidden ones shown)
-			$('#board ol li').fadeIn();
+			$('#board ol li').fadeOut();
 
 			if (notallowed.indexOf(filter) > -1)
 				notallowed.splice(notallowed.indexOf(filter), 1);
@@ -75,7 +75,7 @@ $(document).ready(function(){
 			
 			for (var i =0; i < notallowed.length; i++)
 			{
-				$('#board ol li:not(.' + notallowed[i] + ')').fadeOut();
+				$('#board ol li:visible:filter(.' + notallowed[i] + ')').fadeOut();
 			}
 		});
 		});
