@@ -50,7 +50,7 @@ $(document).ready(function(){
 
   var notallowed = new Array();
 
-  $('input[type="checkbox"]').click(function(e){
+  $('input:checkbox').click(function(e){
     e.preventDefault();
     var filter = $(this).attr('id');
     if (notallowed.indexOf(filter) > -1) {
