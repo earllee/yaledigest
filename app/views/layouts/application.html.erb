@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 		var notallowed = new Array();
 		
-		$('#filters a').click(function(e){
+		$('#filters button').click(function(e){
 
 			//prevent the default behaviour of the link
 			e.preventDefault();
@@ -64,6 +64,7 @@ $(document).ready(function(){
 			if (filter === "showall")
 			{
 				$('#board ol li').fadeIn();
+				notallowed = {};
 				return;
 			}
 
