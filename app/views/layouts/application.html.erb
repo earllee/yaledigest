@@ -61,22 +61,23 @@ $(document).ready(function(){
 			//get the id of the clicked link which is equal to classes of our content
 			var filter = $(this).attr('id');
 
-			//show all the list items(this is needed to get the hidden ones shown)
-			$('#board ol li').fadeOut();
+			if (filter === "showall")
+			{
+				$('#board ol li').fadeIn();
+				return;
+			}
 
 			if (notallowed.indexOf(filter) > -1)
-				notallowed.splice(notallowed.indexOf(filter), 1);
-			else
-				notallowed.push(filter);
-				
-			console.log(notallowed);
-			/*using the :not attribute and the filter class in it we are selecting
-			only the list items that don't have that class and hide them '*/
-			
-			for (var i =0; i < notallowed.length; i++)
 			{
-				$('#board ol li:visible').filter('.' + notallowed[i]).fadeOut();
+				notallowed.splice(notallowed.indexOf(filter), 1);
+				$('#board ol li').filter('.' + filter).fadeIn();
 			}
+			else
+			{
+				notallowed.push(filter);
+				$('#board ol li').filter('.' + filter).fadeOut();
+			}	
+			console.log(notallowed);
 		});
 		});
 </script>
