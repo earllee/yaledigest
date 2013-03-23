@@ -50,8 +50,9 @@ $(document).ready(function(){
 
   var notallowed = new Array();
 
-  $('input:checkbox').click(function(e){
+  $(':checkbox').click(function(e){
     e.preventDefault();
+    $('.dropdown').addClass('open');
     var filter = $(this).attr('id');
     if (notallowed.indexOf(filter) > -1) {
       notallowed.splice(notallowed.indexOf(filter), 1);
