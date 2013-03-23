@@ -60,13 +60,14 @@ $(document).ready(function(){
 			e.preventDefault();
 			//get the id of the clicked link which is equal to classes of our content
 			var filter = $(this).attr('id');
-			var togglestate = $(this).attr('value');
-			console.log("toggled: " + togglestate);
-			$(this).setAttribute('toggle', 'false')
+			//var togglestate = $(this).attr('value');
+			//console.log("toggled: " + togglestate);
+			//$(this).setAttribute('toggle', 'false')
 
 			if (filter === "showall")
 			{
 				$('#board ol li').fadeIn();
+				$('#filters button').toggleClass('active');
 				notallowed = new Array();
 				return;
 			}
