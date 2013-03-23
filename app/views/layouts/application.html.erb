@@ -55,8 +55,9 @@ $(document).ready(function(){
 		var notallowed = new Array();
   $('#showAll').click(function(e){
     e.preventDefault();
+    $('.dropdown').addClass('open');
 if ($(':checkbox[checked="false"]')) {
-  $(':checkbox').addAttr('checked');
+  $(':checkbox').attr('checked');
   $(this).html('Hide All');
 } else {
   $(':checkbox').removeAttr('checked');
