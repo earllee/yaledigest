@@ -60,14 +60,14 @@ $(document).ready(function(){
 			e.preventDefault();
 			//get the id of the clicked link which is equal to classes of our content
 			var filter = $(this).attr('id');
-			var togglestate = $(this).attr('toggle);
+			var togglestate = $(this).attr('toggle');
 			console.log("toggled: " + togglestate);
 			$(this).setAttribute('toggle', 'false')
 
 			if (filter === "showall")
 			{
 				$('#board ol li').fadeIn();
-				notallowed = {};
+				notallowed = new Array();
 				return;
 			}
 			console.log(filter);
