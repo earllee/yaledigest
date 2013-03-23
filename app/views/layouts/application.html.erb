@@ -53,41 +53,59 @@ $(document).ready(function(){
 		});
 
 		var notallowed = new Array();
-		$('#filters button').addClass('active');
-		
-		$('#filters button').click(function(e){
+  $(':checkbox').click(function(e){
+    e.preventDefault();
+    $('.dropdown').addClass('open');
+    var filter = $(this).attr('id');
+    if (notallowed.indexOf(filter) > -1) {
+      notallowed.splice(notallowed.indexOf(filter), 1);
+      $('#board ol li').filter('.' + filter).fadeIn();
+    }
+    else {
+      notallowed.push(filter);
+      $('#board ol li').filter('.' + filter).fadeOut();
+    }	
+  });
 
-			//prevent the default behaviour of the link
-			e.preventDefault();
-			//get the id of the clicked link which is equal to classes of our content
-			var filter = $(this).attr('id');
-			//var togglestate = $(this).attr('value');
-			//console.log("toggled: " + togglestate);
-			//$(this).setAttribute('toggle', 'false')
-
-			if (filter === "showall")
-			{
-				$('#board ol li').fadeIn();
-				$('#filters button').removeClass('active');
-				$('#filters button').addClass('active');
-				$(this).toggleClass('active');
-				notallowed = new Array();
-				return;
-			}
-			console.log(filter);
-			if (notallowed.indexOf(filter) > -1)
-			{
-				notallowed.splice(notallowed.indexOf(filter), 1);
-				$('#board ol li').filter('.' + filter).fadeIn();
-			}
-			else
-			{
-				notallowed.push(filter);
-				$('#board ol li').filter('.' + filter).fadeOut();
-			}	
-			console.log(notallowed);
-		});
-		});
+  $('#showAll').click(function(){
+          $('#board ol li').fadeIn();
+          notallowed = new Array();
+  });
+//		$('#filters button').addClass('active');
+//		
+//		$('#filters button').click(function(e){
+//
+//			//prevent the default behaviour of the link
+//			e.preventDefault();
+//			//get the id of the clicked link which is equal to classes of our content
+//			var filter = $(this).attr('id');
+//			//var togglestate = $(this).attr('value');
+//			//console.log("toggled: " + togglestate);
+//			//$(this).setAttribute('toggle', 'false')
+//
+//			if (filter === "showall")
+//			{
+//				$('#board ol li').fadeIn();
+//				$('#filters button').removeClass('active');
+//				$('#filters button').addClass('active');
+//				$(this).toggleClass('active');
+//				notallowed = new Array();
+//				return;
+//			}
+//			console.log(filter);
+//			if (notallowed.indexOf(filter) > -1)
+//			{
+//				notallowed.splice(notallowed.indexOf(filter), 1);
+//				$('#board ol li').filter('.' + filter).fadeIn();
+//			}
+//			else
+//			{
+//				notallowed.push(filter);
+//				$('#board ol li').filter('.' + filter).fadeOut();
+//			}	
+//			console.log(notallowed);
+//		});
+//		});
 </script>
 </body>
 </html>
