@@ -54,18 +54,24 @@ $(document).ready(function(){
 
 		var notallowed = new Array();
   $('#showAll').click(function(e){
+console.log('hi');
     e.preventDefault();
     $('.dropdown').addClass('open');
 if ($(':checkbox[checked="false"]')) {
   $(':checkbox').attr('checked');
   $(this).html('Hide All');
+  $(':checkbox').each(function(e) {
+    $(this).attr('checked');
+  });
 } else {
   $(':checkbox').removeAttr('checked');
   $(this).html('Show All');
+  $(':checkbox').each(function(e) {
+    $(this).removeAttr('checked');
+  });
 }
 })
   $(':checkbox').click(function(e){
-    e.preventDefault();
     $('.dropdown').addClass('open');
     var filter = $(this).attr('id');
     if (notallowed.indexOf(filter) > -1) {
