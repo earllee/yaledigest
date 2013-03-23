@@ -66,15 +66,14 @@ $(document).ready(function(){
 
 			if (notallowed.indexOf(filter) > -1)
 				notallowed.splice(notallowed.indexOf(filter), 1);
-			
+			else
+				notallowed.push(filter);
 			/*using the :not attribute and the filter class in it we are selecting
 			only the list items that don't have that class and hide them '*/
-			if (notallowed != {})
+			
+			for (var i =0; i < notallowed.length; i++)
 			{
-				for (var i =0; i < notallowed.length; i++)
-				{
-					$('#board ol li:not(.' + notallowed[i] + ')').fadeOut();
-				}
+				$('#board ol li:not(.' + notallowed[i] + ')').fadeOut();
 			}
 		});
 		});
