@@ -72,7 +72,6 @@ if ($(':checkbox[checked="false"]')) {
 }
 })
   $(':checkbox').click(function(e){
-    $('.dropdown').addClass('open');
     var filter = $(this).attr('id');
     if (notallowed.indexOf(filter) > -1) {
       notallowed.splice(notallowed.indexOf(filter), 1);
@@ -85,12 +84,13 @@ if ($(':checkbox[checked="false"]')) {
       $('#showAll').html('Show All');
     else
       $('#showAll').html('Hide All');
+    $('.dropdown').addClass('open');
   });
 
-  $('#showAll').click(function(){
-          $('#board ol li').fadeIn();
-          notallowed = new Array();
-  });
+  //$('#showAll').click(function(){
+  //        $('#board ol li').fadeIn();
+  //        notallowed = new Array();
+  //});
 });
 </script>
 </body>
