@@ -54,7 +54,6 @@ $(document).ready(function(){
 
 		var notallowed = new Array();
   $('#showAll').on('click', function(e){
-      console.log('hi');
       e.preventDefault();
           $('.dropdown').addClass('open');
       if ($('input:checked').length === 0) {
@@ -62,12 +61,26 @@ console.log('ajksdhfhjkfdhk')
         $(this).html('Hide All');
         $('input[type="checkbox"]').prop('checked', true);
         $('#board ol li').fadeIn();
+        notallowed = new Array();
       } else {
         console.log('here');
         $(this).html('Show All');
         $('input[type="checkbox"]').removeAttr('checked');
         $('#board ol li').fadeOut();
+        $('input:checked').each(function(){
+          var filter = $(this).attr('id');
+          notallowed.push(filter);
+        })
       }
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
     $('.dropdown').addClass('open');
   });
 
@@ -85,6 +98,15 @@ console.log('ajksdhfhjkfdhk')
       $('#showAll').html('Show All');
     else
       $('#showAll').html('Hide All');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
+    $('.dropdown').addClass('open');
     $('.dropdown').addClass('open');
   });
 
