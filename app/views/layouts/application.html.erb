@@ -53,11 +53,11 @@ $(document).ready(function(){
 		});
 
 		var notallowed = new Array();
-  $('#showAll').click(function(e){
+  $('#showAll').on('click', function(e){
       console.log('hi');
       e.preventDefault();
           $('.dropdown').addClass('open');
-      if (!$('input:checked')) {
+      if ($('input:checked').length === 0) {
         $(this).html('Hide All');
         $('input').each(function(e) {
           $(this).attr('checked');
@@ -71,10 +71,12 @@ $(document).ready(function(){
         });
         $('#board ol li').fadeOut();
       }
+    $('.dropdown').addClass('open');
   });
 
-  $(':checkbox').click(function(e){
+  $(':checkbox').on('click', function(e){
     var filter = $(this).attr('id');
+    $('.dropdown').addClass('open');
     if (notallowed.indexOf(filter) > -1) {
       notallowed.splice(notallowed.indexOf(filter), 1);
       $('#board ol li').filter('.' + filter).fadeIn();
