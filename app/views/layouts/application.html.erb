@@ -20,74 +20,54 @@
 $(document).ready(function(){ 
 
 		$("#search").keyup(function(){
+      // Retrieve the input field text and reset the count to zero
+      var filter = $(this).val(), count = 0;
+      if(!filter){
+        $("#board ol li").show();
+        return;
+      }
 
-		// Retrieve the input field text and reset the count to zero
-		var filter = $(this).val(), count = 0;
-		if(!filter){
-			$("#board ol li").show();
-			return;
-		}
+      var regex = new RegExp(filter, "i"); 
 
-		var regex = new RegExp(filter, "i"); 
-
-		// Loop through the comment list
-		$(".listing li").each(function(){
-
-		// If the list item does not contain the text phrase fade it out
-		if ($(this).text().search(regex) < 0) { 
-		$(this).fadeOut();
-
-		// Show the list item if the phrase matches and increase the count by 1
-		} else {
-		$(this).fadeIn();
-		count++;
-		}
-		});
-
-		// Update the count
-		var numberItems = count;
+      // Loop through the comment list
+      $(".listing li").each(function(){
+        // If the list item does not contain the text phrase fade it out
+        // Else, show the list item if the phrase matches and increase the count by 1
+        if ($(this).text().search(regex) < 0) { 
+          $(this).fadeOut();
+        } else {
+          $(this).fadeIn();
+          count++;
+        }
+      });
+      // Update the count
+      var numberItems = count;
 		});
 
 		$("[id^=link]").click(function(e) { 
 			e.preventDefault(); 
 		});
 
-		var notallowed = new Array();
-		$('#filters button').addClass('active');
-		
-		$('#filters button').click(function(e){
+  var notallowed = new Array();
 
-			//prevent the default behaviour of the link
-			e.preventDefault();
-			//get the id of the clicked link which is equal to classes of our content
-			var filter = $(this).attr('id');
-			//var togglestate = $(this).attr('value');
-			//console.log("toggled: " + togglestate);
-			//$(this).setAttribute('toggle', 'false')
+  $('input[type="checkbox"]').click(function(e){
+    e.preventDefault();
+    var filter = $(this).attr('id');
+    if (notallowed.indexOf(filter) > -1) {
+      notallowed.splice(notallowed.indexOf(filter), 1);
+      $('#board ol li').filter('.' + filter).fadeIn();
+    }
+    else {
+      notallowed.push(filter);
+      $('#board ol li').filter('.' + filter).fadeOut();
+    }	
+  });
 
-			if (filter === "showall")
-			{
-				$('#board ol li').fadeIn();
-				$('#filters button').removeClass('active');
-				$('#filters button').addClass('active');
-				$(this).toggleClass('active');
-				notallowed = new Array();
-				return;
-			}
-			console.log(filter);
-			if (notallowed.indexOf(filter) > -1)
-			{
-				notallowed.splice(notallowed.indexOf(filter), 1);
-				$('#board ol li').filter('.' + filter).fadeIn();
-			}
-			else
-			{
-				notallowed.push(filter);
-				$('#board ol li').filter('.' + filter).fadeOut();
-			}	
-			console.log(notallowed);
-		});
-		});
+  $('#showAll').click(function(){
+          $('#board ol li').fadeIn();
+          notallowed = new Array();
+  });
+}
 </script>
 </body>
 </html>
