@@ -52,6 +52,8 @@ $(document).ready(function(){
 			e.preventDefault(); 
 		});
 
+		var notallowed = new Array();
+		
 		$('#filters a').click(function(e){
 
 			//prevent the default behaviour of the link
@@ -62,11 +64,18 @@ $(document).ready(function(){
 			//show all the list items(this is needed to get the hidden ones shown)
 			$('#board ol li').fadeIn();
 
+			if (notallowed.indexOf(filter) > -1)
+				notallowed.splice(notallowed.indexOf(filter), 1);
+			
 			/*using the :not attribute and the filter class in it we are selecting
 			only the list items that don't have that class and hide them '*/
-			if (filter != "showall")
-				$('#board ol li:not(.' + filter + ')').fadeOut();
-
+			if (notallowed != {})
+			{
+				for (var i =0; i < notallowed.length; i++)
+				{
+					$('#board ol li:not(.' + notallowed[i] + ')').fadeOut();
+				}
+			}
 		});
 		});
 </script>
