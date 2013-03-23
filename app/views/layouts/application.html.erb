@@ -48,28 +48,6 @@ $(document).ready(function(){
 		var numberItems = count;
 		});
 
-		$("[id^=link]").click(function(e) { 
-			e.preventDefault(); 
-		});
-
-		var notallowed = new Array();
-  $(':checkbox').click(function(e){
-    e.preventDefault();
-    $('.dropdown').addClass('open');
-    var filter = $(this).attr('id');
-    if (notallowed.indexOf(filter) > -1) {
-      notallowed.splice(notallowed.indexOf(filter), 1);
-      $('#board ol li').filter('.' + filter).fadeIn();
-    } else {
-      notallowed.push(filter);
-      $('#board ol li').filter('.' + filter).fadeOut();
-    }	
-  });
-
-  $('#showAll').click(function(){
-          $('#board ol li').fadeIn();
-          notallowed = new Array();
-  });
 }
 </script>
 </body>
