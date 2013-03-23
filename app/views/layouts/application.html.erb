@@ -60,6 +60,9 @@ $(document).ready(function(){
 			e.preventDefault();
 			//get the id of the clicked link which is equal to classes of our content
 			var filter = $(this).attr('id');
+			var togglestate = $(this).attr('toggle);
+			console.log("toggled: " + togglestate);
+			$(this).setAttribute('toggle', 'false')
 
 			if (filter === "showall")
 			{
@@ -67,7 +70,7 @@ $(document).ready(function(){
 				notallowed = {};
 				return;
 			}
-
+			console.log(filter);
 			if (notallowed.indexOf(filter) > -1)
 			{
 				notallowed.splice(notallowed.indexOf(filter), 1);
