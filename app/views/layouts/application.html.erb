@@ -65,12 +65,12 @@ console.log('ajksdhfhjkfdhk')
       } else {
         console.log('here');
         $(this).html('Show All');
-        $('input[type="checkbox"]').removeAttr('checked');
-        $('#board ol li').fadeOut();
         $('input:checked').each(function(){
           var filter = $(this).attr('id');
           notallowed.push(filter);
-        })
+        });
+        $('input[type="checkbox"]').removeAttr('checked');
+        $('#board ol li').fadeOut();
       }
     $('.dropdown').addClass('open');
     $('.dropdown').addClass('open');
